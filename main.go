@@ -22,6 +22,12 @@ func main() {
 	fmt.Println("RunningSum([3,1,2,10,1]) =", easy.RunningSum([]int{3, 1, 2, 10, 1})) // Output: [3,4,6,16,17]
 	fmt.Println("")
 
+	fmt.Println("Richest Customer Wealth")
+	fmt.Println("MaximumWealth([[1,2,3],[3,2,1]]) =", easy.MaximumWealth([][]int{{1, 2, 3}, {3, 2, 1}}))                    // Output: 6
+	fmt.Println("MaximumWealth([[1,5],[7,3],[3,5]]) =", easy.MaximumWealth([][]int{{1, 5}, {7, 3}, {3, 5}}))                // Output: 10
+	fmt.Println("MaximumWealth([[2,8,7],[7,1,3],[1,9,5]]) =", easy.MaximumWealth([][]int{{2, 8, 7}, {7, 1, 3}, {1, 9, 5}})) // Output: 17
+	fmt.Println("")
+
 	fmt.Println("--- MEDIUM ---")
 	fmt.Println("")
 
