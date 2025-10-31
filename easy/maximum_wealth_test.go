@@ -13,17 +13,23 @@ func TestMaximumWealth(t *testing.T) {
 	}{
 		{
 			name: "Case 1",
-			args: args{accounts: [][]int{{1, 2, 3}, {3, 2, 1}}},
+			args: args{
+				accounts: [][]int{{1, 2, 3}, {3, 2, 1}},
+			},
 			want: 6,
 		},
 		{
 			name: "Case 2",
-			args: args{accounts: [][]int{{1, 5}, {7, 3}, {3, 5}}},
+			args: args{
+				accounts: [][]int{{1, 5}, {7, 3}, {3, 5}},
+			},
 			want: 10,
 		},
 		{
 			name: "Case 3",
-			args: args{accounts: [][]int{{2, 8, 7}, {7, 1, 3}, {1, 9, 5}}},
+			args: args{
+				accounts: [][]int{{2, 8, 7}, {7, 1, 3}, {1, 9, 5}},
+			},
 			want: 17,
 		},
 	}
