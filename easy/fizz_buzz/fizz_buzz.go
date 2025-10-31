@@ -1,4 +1,4 @@
-package easy
+package fizz_buzz
 
 import "strconv"
 

@@ -1,4 +1,4 @@
-package easy
+package running_sum
 
 func RunningSum(nums []int) []int {
 	sum := 0

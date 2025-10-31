@@ -1,4 +1,4 @@
-package easy
+package middle_node
 
 func MiddleNode(head *ListNode) *ListNode {
 	nodes := []ListNode{}

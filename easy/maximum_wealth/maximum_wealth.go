@@ -1,4 +1,4 @@
-package easy
+package maximum_wealth
 
 func MaximumWealth(accounts [][]int) int {
 	maxWealth := 0

@@ -1,4 +1,4 @@
-package easy
+package middle_node
 
 import (
 	"reflect"
@@ -17,7 +17,7 @@ func TestMiddleNode(t *testing.T) {
 		{
 			name: "Case 1",
 			args: args{
-				head: ListNodeHead1,
+				head: Head1,
 			},
 			want: &ListNode{
 				Val: 3,
@@ -32,7 +32,7 @@ func TestMiddleNode(t *testing.T) {
 		{
 			name: "Case 2",
 			args: args{
-				head: ListNodeHead2,
+				head: Head2,
 			},
 			want: &ListNode{
 				Val: 4,

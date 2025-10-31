@@ -1,4 +1,4 @@
-package easy
+package number_of_steps
 
 import "testing"
 

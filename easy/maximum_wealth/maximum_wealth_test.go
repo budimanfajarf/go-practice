@@ -1,4 +1,4 @@
-package easy
+package maximum_wealth
 
 import "testing"
 

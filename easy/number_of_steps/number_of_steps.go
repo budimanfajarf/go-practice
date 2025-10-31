@@ -1,4 +1,4 @@
-package easy
+package number_of_steps
 
 func NumberOfSteps(num int) int {
 	steps := 0

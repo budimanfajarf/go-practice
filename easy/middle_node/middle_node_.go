@@ -1,11 +1,11 @@
-package easy
+package middle_node
 
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-var ListNodeHead1 = &ListNode{
+var Head1 = &ListNode{
 	Val: 1,
 	Next: &ListNode{
 		Val: 2,
@@ -21,7 +21,7 @@ var ListNodeHead1 = &ListNode{
 	},
 }
 
-var ListNodeHead2 = &ListNode{
+var Head2 = &ListNode{
 	Val: 1,
 	Next: &ListNode{
 		Val: 2,

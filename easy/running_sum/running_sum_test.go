@@ -1,4 +1,4 @@
-package easy
+package running_sum
 
 import (
 	"reflect"
