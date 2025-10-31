@@ -34,6 +34,11 @@ func main() {
 	fmt.Println("FizzBuzz(15) =", easy.FizzBuzz(15)) // Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
 	fmt.Println("")
 
+	fmt.Println("Middle of the Linked List")
+	fmt.Println("MiddleNode([1,2,3,4,5]) =", easy.MiddleNode(easy.ListNodeHead1).Val)   // Output: 3
+	fmt.Println("MiddleNode([1,2,3,4,5,6]) =", easy.MiddleNode(easy.ListNodeHead2).Val) // Output: 4
+	fmt.Println("")
+
 	fmt.Println("--- MEDIUM ---")
 	fmt.Println("")
 
