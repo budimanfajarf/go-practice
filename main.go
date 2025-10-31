@@ -28,6 +28,12 @@ func main() {
 	fmt.Println("MaximumWealth([[2,8,7],[7,1,3],[1,9,5]]) =", easy.MaximumWealth([][]int{{2, 8, 7}, {7, 1, 3}, {1, 9, 5}})) // Output: 17
 	fmt.Println("")
 
+	fmt.Println("Fizz Buzz")
+	fmt.Println("FizzBuzz(3) =", easy.FizzBuzz(3))   // Output: ["1","2","Fizz"]
+	fmt.Println("FizzBuzz(5) =", easy.FizzBuzz(5))   // Output: ["1","2","Fizz","4","Buzz"]
+	fmt.Println("FizzBuzz(15) =", easy.FizzBuzz(15)) // Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
+	fmt.Println("")
+
 	fmt.Println("--- MEDIUM ---")
 	fmt.Println("")
 
