@@ -7,6 +7,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/maximum_wealth"
 	"github.com/budimanfajarf/go-practice/easy/middle_node"
 	"github.com/budimanfajarf/go-practice/easy/number_of_steps"
+	"github.com/budimanfajarf/go-practice/easy/ransom_note"
 	"github.com/budimanfajarf/go-practice/easy/running_sum"
 )
 
@@ -41,6 +42,13 @@ func main() {
 	fmt.Println("Middle of the Linked List")
 	fmt.Println("MiddleNode([1,2,3,4,5]) =", middle_node.MiddleNode(middle_node.Head1).Val)   // Output: 3
 	fmt.Println("MiddleNode([1,2,3,4,5,6]) =", middle_node.MiddleNode(middle_node.Head2).Val) // Output: 4
+	fmt.Println("")
+
+	fmt.Println("Ransom Note")
+	fmt.Println("CanConstruct('a', 'b') =", ransom_note.CanConstruct("a", "b"))         // Output: false
+	fmt.Println("CanConstruct('aa', 'ab') =", ransom_note.CanConstruct("aa", "ab"))     // Output: false
+	fmt.Println("CanConstruct('aa', 'aab') =", ransom_note.CanConstruct("aa", "aab"))   // Output: true
+	fmt.Println("CanConstruct('aab', 'baa') =", ransom_note.CanConstruct("aab", "baa")) // Output: true
 	fmt.Println("")
 
 	fmt.Println("--- MEDIUM ---")
