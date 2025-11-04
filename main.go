@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/budimanfajarf/go-practice/easy/fizz_buzz"
+	"github.com/budimanfajarf/go-practice/easy/largest_good_int"
 	"github.com/budimanfajarf/go-practice/easy/maximum_wealth"
 	"github.com/budimanfajarf/go-practice/easy/middle_node"
 	"github.com/budimanfajarf/go-practice/easy/number_of_steps"
@@ -49,6 +50,12 @@ func main() {
 	fmt.Println("CanConstruct('aa', 'ab') =", ransom_note.CanConstruct("aa", "ab"))     // Output: false
 	fmt.Println("CanConstruct('aa', 'aab') =", ransom_note.CanConstruct("aa", "aab"))   // Output: true
 	fmt.Println("CanConstruct('aab', 'baa') =", ransom_note.CanConstruct("aab", "baa")) // Output: true
+	fmt.Println("")
+
+	fmt.Println("Largest 3-Same-Digit Number in String")
+	fmt.Println("LargestGoodInteger('6777133339') =", largest_good_int.LargestGoodInteger("6777133339")) // Output: "777"
+	fmt.Println("LargestGoodInteger('2300019') =", largest_good_int.LargestGoodInteger("2300019"))       // Output: "000"
+	fmt.Println("LargestGoodInteger('42352338') =", largest_good_int.LargestGoodInteger("42352338"))     // Output: ""
 	fmt.Println("")
 
 	fmt.Println("--- MEDIUM ---")
