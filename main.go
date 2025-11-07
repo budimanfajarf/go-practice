@@ -10,6 +10,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/number_of_steps"
 	"github.com/budimanfajarf/go-practice/easy/ransom_note"
 	"github.com/budimanfajarf/go-practice/easy/running_sum"
+	"github.com/budimanfajarf/go-practice/medium/max_subarray"
 )
 
 func main() {
@@ -61,8 +62,9 @@ func main() {
 	fmt.Println("--- MEDIUM ---")
 	fmt.Println("")
 
-	fmt.Println("TODO")
-	fmt.Println("")
+	fmt.Println("Maximum Product Subarray")
+	fmt.Println("MaxProduct([2,3,-2,4]) =", max_subarray.MaxProduct([]int{2, 3, -2, 4})) // Output: 6
+	fmt.Println("MaxProduct([-2,0,-1]) =", max_subarray.MaxProduct([]int{-2, 0, -1}))    // Output: 0
 
 	fmt.Println("--- HARD ---")
 	fmt.Println("")
