@@ -10,6 +10,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/number_of_steps"
 	"github.com/budimanfajarf/go-practice/easy/ransom_note"
 	"github.com/budimanfajarf/go-practice/easy/running_sum"
+	"github.com/budimanfajarf/go-practice/hard/word_ladder"
 	"github.com/budimanfajarf/go-practice/medium/max_subarray"
 )
 
@@ -65,10 +66,13 @@ func main() {
 	fmt.Println("Maximum Product Subarray")
 	fmt.Println("MaxProduct([2,3,-2,4]) =", max_subarray.MaxProduct([]int{2, 3, -2, 4})) // Output: 6
 	fmt.Println("MaxProduct([-2,0,-1]) =", max_subarray.MaxProduct([]int{-2, 0, -1}))    // Output: 0
+	fmt.Println("")
 
 	fmt.Println("--- HARD ---")
 	fmt.Println("")
 
-	fmt.Println("TODO")
+	fmt.Println("Word Ladder")
+	fmt.Println("LadderLength('hit', 'cog', ['hot','dot','dog','lot','log','cog']) =", word_ladder.LadderLength("hit", "cog", []string{"hot", "dot", "dog", "lot", "log", "cog"})) // Output: 5
+	fmt.Println("LadderLength('hit', 'cog', ['hot','dot','dog','lot','log']) =", word_ladder.LadderLength("hit", "cog", []string{"hot", "dot", "dog", "lot", "log"}))              // Output: 0
 	fmt.Println("")
 }
