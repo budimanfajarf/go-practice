@@ -12,6 +12,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/running_sum"
 	"github.com/budimanfajarf/go-practice/hard/word_ladder"
 	"github.com/budimanfajarf/go-practice/medium/max_subarray"
+	"github.com/budimanfajarf/go-practice/medium/top_k"
 )
 
 func main() {
@@ -66,6 +67,13 @@ func main() {
 	fmt.Println("Maximum Product Subarray")
 	fmt.Println("MaxProduct([2,3,-2,4]) =", max_subarray.MaxProduct([]int{2, 3, -2, 4})) // Output: 6
 	fmt.Println("MaxProduct([-2,0,-1]) =", max_subarray.MaxProduct([]int{-2, 0, -1}))    // Output: 0
+	fmt.Println("")
+
+	fmt.Println("Top K Frequent Elements")
+	fmt.Println("TopKFrequent([1,1,1,2,2,3], 2) =", top_k.TopKFrequent([]int{1, 1, 1, 2, 2, 3}, 2))                     // Output: [1,2]
+	fmt.Println("TopKFrequent([1], 1) =", top_k.TopKFrequent([]int{1}, 1))                                              // Output: [1]
+	fmt.Println("TopKFrequent([1,2,1,2,1,2,3,1,3,2], 2) =", top_k.TopKFrequent([]int{1, 2, 1, 2, 1, 2, 3, 1, 3, 2}, 2)) // Output: [1,2]
+	fmt.Println("TopKFrequent([3,2,1,2], 1) =", top_k.TopKFrequent([]int{3, 2, 1, 2}, 1))                               // Output: [2]
 	fmt.Println("")
 
 	fmt.Println("--- HARD ---")
