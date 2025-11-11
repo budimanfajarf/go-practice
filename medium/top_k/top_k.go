@@ -4,10 +4,6 @@ func TopKFrequent(nums []int, k int) []int {
 	numFrequents := map[int]int{}
 	frequentNums := map[int][]int{}
 
-	for i := 0; i < len(nums)+1; i++ {
-		frequentNums[i+1] = []int{}
-	}
-
 	for _, num := range nums {
 		numFrequents[num]++
 	}
@@ -17,7 +13,7 @@ func TopKFrequent(nums []int, k int) []int {
 	}
 
 	topK := []int{}
-	for i := len(frequentNums); i > 0; i-- {
+	for i := len(nums); i > 0; i-- {
 		for _, num := range frequentNums[i] {
 			if len(topK) == k {
 				return topK
