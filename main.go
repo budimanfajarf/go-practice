@@ -10,6 +10,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/number_of_steps"
 	"github.com/budimanfajarf/go-practice/easy/ransom_note"
 	"github.com/budimanfajarf/go-practice/easy/running_sum"
+	"github.com/budimanfajarf/go-practice/easy/two_sum"
 	"github.com/budimanfajarf/go-practice/hard/word_ladder"
 	"github.com/budimanfajarf/go-practice/medium/max_subarray"
 	"github.com/budimanfajarf/go-practice/medium/top_k"
@@ -59,6 +60,12 @@ func main() {
 	fmt.Println("LargestGoodInteger('6777133339') =", largest_good_int.LargestGoodInteger("6777133339")) // Output: "777"
 	fmt.Println("LargestGoodInteger('2300019') =", largest_good_int.LargestGoodInteger("2300019"))       // Output: "000"
 	fmt.Println("LargestGoodInteger('42352338') =", largest_good_int.LargestGoodInteger("42352338"))     // Output: ""
+	fmt.Println("")
+
+	fmt.Println("Two Sum")
+	fmt.Println("TwoSum([2,7,11,15], 9) =", two_sum.TwoSum([]int{2, 7, 11, 15}, 9)) // Output: [0,1]
+	fmt.Println("TwoSum([3,2,4], 6) =", two_sum.TwoSum([]int{3, 2, 4}, 6))          // Output: [1,2]
+	fmt.Println("TwoSum([3,3], 6) =", two_sum.TwoSum([]int{3, 3}, 6))               // Output: [0,1]
 	fmt.Println("")
 
 	fmt.Println("--- MEDIUM ---")
