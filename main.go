@@ -7,6 +7,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/largest_good_int"
 	"github.com/budimanfajarf/go-practice/easy/maximum_wealth"
 	"github.com/budimanfajarf/go-practice/easy/middle_node"
+	"github.com/budimanfajarf/go-practice/easy/most_frequent"
 	"github.com/budimanfajarf/go-practice/easy/number_of_steps"
 	"github.com/budimanfajarf/go-practice/easy/ransom_note"
 	"github.com/budimanfajarf/go-practice/easy/running_sum"
@@ -66,6 +67,11 @@ func main() {
 	fmt.Println("TwoSum([2,7,11,15], 9) =", two_sum.TwoSum([]int{2, 7, 11, 15}, 9)) // Output: [0,1]
 	fmt.Println("TwoSum([3,2,4], 6) =", two_sum.TwoSum([]int{3, 2, 4}, 6))          // Output: [1,2]
 	fmt.Println("TwoSum([3,3], 6) =", two_sum.TwoSum([]int{3, 3}, 6))               // Output: [0,1]
+	fmt.Println("")
+
+	fmt.Println("Most Frequent Number Following Key In an Array")
+	fmt.Println("MostFrequent([1,100,200,1,100], 1) =", most_frequent.MostFrequent([]int{1, 100, 200, 1, 100}, 1)) // Output: 100
+	fmt.Println("MostFrequent([2,2,2,2,3], 2) =", most_frequent.MostFrequent([]int{2, 2, 2, 2, 3}, 2))             // Output: 2
 	fmt.Println("")
 
 	fmt.Println("--- MEDIUM ---")
