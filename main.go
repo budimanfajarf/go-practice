@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/budimanfajarf/go-practice/easy/binary_search"
 	"github.com/budimanfajarf/go-practice/easy/fizz_buzz"
 	"github.com/budimanfajarf/go-practice/easy/largest_good_int"
 	"github.com/budimanfajarf/go-practice/easy/maximum_wealth"
@@ -72,6 +73,12 @@ func main() {
 	fmt.Println("Most Frequent Number Following Key In an Array")
 	fmt.Println("MostFrequent([1,100,200,1,100], 1) =", most_frequent.MostFrequent([]int{1, 100, 200, 1, 100}, 1)) // Output: 100
 	fmt.Println("MostFrequent([2,2,2,2,3], 2) =", most_frequent.MostFrequent([]int{2, 2, 2, 2, 3}, 2))             // Output: 2
+	fmt.Println("")
+
+	fmt.Println("Binary Search")
+	fmt.Println("Search([-1,0,3,5,9,12], 9) =", binary_search.Search([]int{-1, 0, 3, 5, 9, 12}, 9))                                 // Output: 4
+	fmt.Println("Search([-1,0,3,5,9,12], 2) =", binary_search.Search([]int{-1, 0, 3, 5, 9, 12}, 2))                                 // Output: -1
+	fmt.Println("Search([2,5,8,12,16,23,38,56,72,91], 23) =", binary_search.Search([]int{2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, 23)) // Output: 5
 	fmt.Println("")
 
 	fmt.Println("--- MEDIUM ---")
