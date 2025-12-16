@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/budimanfajarf/go-practice/easy/add_two_numbers"
 	"github.com/budimanfajarf/go-practice/easy/binary_search"
 	"github.com/budimanfajarf/go-practice/easy/fizz_buzz"
 	"github.com/budimanfajarf/go-practice/easy/largest_good_int"
@@ -79,6 +80,11 @@ func main() {
 	fmt.Println("Search([-1,0,3,5,9,12], 9) =", binary_search.Search([]int{-1, 0, 3, 5, 9, 12}, 9))                                 // Output: 4
 	fmt.Println("Search([-1,0,3,5,9,12], 2) =", binary_search.Search([]int{-1, 0, 3, 5, 9, 12}, 2))                                 // Output: -1
 	fmt.Println("Search([2,5,8,12,16,23,38,56,72,91], 23) =", binary_search.Search([]int{2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, 23)) // Output: 5
+	fmt.Println("")
+
+	fmt.Println("Add Two Numbers")
+	resultAddTwoNumbers := add_two_numbers.AddTwoNumbers(add_two_numbers.L1, add_two_numbers.L2)
+	fmt.Print("AddTwoNumbers([2,4,3], [5,6,4]) = [", resultAddTwoNumbers.Val, ",", resultAddTwoNumbers.Next.Val, ",", resultAddTwoNumbers.Next.Next.Val, "]", "\n") // Output: [7,0,8]
 	fmt.Println("")
 
 	fmt.Println("--- MEDIUM ---")
