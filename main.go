@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 
-	"github.com/budimanfajarf/go-practice/easy/add_two_numbers"
 	"github.com/budimanfajarf/go-practice/easy/binary_search"
 	"github.com/budimanfajarf/go-practice/easy/fizz_buzz"
 	"github.com/budimanfajarf/go-practice/easy/largest_good_int"
@@ -15,6 +14,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/running_sum"
 	"github.com/budimanfajarf/go-practice/easy/two_sum"
 	"github.com/budimanfajarf/go-practice/hard/word_ladder"
+	"github.com/budimanfajarf/go-practice/medium/add_two_numbers"
 	"github.com/budimanfajarf/go-practice/medium/max_subarray"
 	"github.com/budimanfajarf/go-practice/medium/top_k"
 )
@@ -82,11 +82,6 @@ func main() {
 	fmt.Println("Search([2,5,8,12,16,23,38,56,72,91], 23) =", binary_search.Search([]int{2, 5, 8, 12, 16, 23, 38, 56, 72, 91}, 23)) // Output: 5
 	fmt.Println("")
 
-	fmt.Println("Add Two Numbers")
-	resultAddTwoNumbers := add_two_numbers.AddTwoNumbers(add_two_numbers.L1, add_two_numbers.L2)
-	fmt.Print("AddTwoNumbers([2,4,3], [5,6,4]) = [", resultAddTwoNumbers.Val, ",", resultAddTwoNumbers.Next.Val, ",", resultAddTwoNumbers.Next.Next.Val, "]", "\n") // Output: [7,0,8]
-	fmt.Println("")
-
 	fmt.Println("--- MEDIUM ---")
 	fmt.Println("")
 
@@ -100,6 +95,19 @@ func main() {
 	fmt.Println("TopKFrequent([1], 1) =", top_k.TopKFrequent([]int{1}, 1))                                              // Output: [1]
 	fmt.Println("TopKFrequent([1,2,1,2,1,2,3,1,3,2], 2) =", top_k.TopKFrequent([]int{1, 2, 1, 2, 1, 2, 3, 1, 3, 2}, 2)) // Output: [1,2]
 	fmt.Println("TopKFrequent([3,2,1,2], 1) =", top_k.TopKFrequent([]int{3, 2, 1, 2}, 1))                               // Output: [2]
+	fmt.Println("")
+
+	fmt.Println("Add Two Numbers")
+	resultAddTwoNumbers := add_two_numbers.AddTwoNumbers(add_two_numbers.L1, add_two_numbers.L2)
+	fmt.Print("AddTwoNumbers([2,4,3], [5,6,4]) = [") // Output: [7,0,8]
+	for resultAddTwoNumbers != nil {
+		fmt.Print(resultAddTwoNumbers.Val)
+		if resultAddTwoNumbers.Next != nil {
+			fmt.Print(",")
+		}
+		resultAddTwoNumbers = resultAddTwoNumbers.Next
+	}
+	fmt.Print("]", "\n")
 	fmt.Println("")
 
 	fmt.Println("--- HARD ---")
