@@ -15,6 +15,7 @@ import (
 	"github.com/budimanfajarf/go-practice/easy/two_sum"
 	"github.com/budimanfajarf/go-practice/hard/word_ladder"
 	"github.com/budimanfajarf/go-practice/medium/add_two_numbers"
+	"github.com/budimanfajarf/go-practice/medium/edit_distance"
 	"github.com/budimanfajarf/go-practice/medium/max_subarray"
 	"github.com/budimanfajarf/go-practice/medium/top_k"
 )
@@ -108,6 +109,11 @@ func main() {
 		resultAddTwoNumbers = resultAddTwoNumbers.Next
 	}
 	fmt.Print("]", "\n")
+	fmt.Println("")
+
+	fmt.Println("Edit Distance / Levenshtein Distance Algorithm")
+	fmt.Println("MinDistance('horse', 'ros') =", edit_distance.MinDistance("horse", "ros"))                     // Output: 3
+	fmt.Println("MinDistance('intention', 'execution') =", edit_distance.MinDistance("intention", "execution")) // Output: 5
 	fmt.Println("")
 
 	fmt.Println("--- HARD ---")
