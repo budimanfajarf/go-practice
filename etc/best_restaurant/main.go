@@ -3,14 +3,10 @@ package main
 import (
 	"bufio"
 	"encoding/json"
-	_ "encoding/json"
 	"fmt"
 	"io"
-	_ "io/ioutil"
 	"log"
-	_ "log"
 	"net/http"
-	_ "net/http"
 	"os"
 	"strconv"
 	"strings"
@@ -72,7 +68,10 @@ func bestRestaurant(city string, cost int32) string {
 				continue
 			}
 
-			if outletRating > bestOutlet.UserRating.AverageRating || (outletRating == bestOutlet.UserRating.AverageRating && outletCost < bestOutlet.EstimatedCost) {
+			bestOutletRating := bestOutlet.UserRating.AverageRating
+			bestOutletCost := bestOutlet.EstimatedCost
+
+			if outletRating > bestOutletRating || (outletRating == bestOutletRating && outletCost < bestOutletCost) {
 				bestOutlet = outlet
 			}
 		}
