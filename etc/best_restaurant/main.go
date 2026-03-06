@@ -2,16 +2,40 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
 	_ "encoding/json"
 	"fmt"
 	"io"
 	_ "io/ioutil"
+	"log"
 	_ "log"
+	"net/http"
 	_ "net/http"
 	"os"
 	"strconv"
 	"strings"
 )
+
+type UserRating struct {
+	AverageRating float64 `json:"average_rating"`
+	Votes         int     `json:"votes"`
+}
+
+type Outlet struct {
+	ID            int        `json:"id"`
+	Name          string     `json:"name"`
+	City          string     `json:"city"`
+	EstimatedCost int        `json:"estimated_cost"`
+	UserRating    UserRating `json:"user_rating"`
+}
+
+type APIResponse struct {
+	Page       int      `json:"page"`
+	PerPage    int      `json:"per_page"`
+	Total      int      `json:"total"`
+	TotalPages int      `json:"total_pages"`
+	Data       []Outlet `json:"data"`
+}
 
 /*
  * Complete the 'bestRestaurant' function below.
@@ -24,7 +48,42 @@ import (
  */
 
 func bestRestaurant(city string, cost int32) string {
+	baseURL := "https://jsonmock.hackerrank.com/api/food_outlets"
+	bestOutlet := Outlet{}
 
+	page := 1
+	for {
+		resp, err := http.Get(fmt.Sprintf("%s?city=%s&page=%d", baseURL, city, page))
+		if err != nil {
+			log.Fatal(err)
+		}
+		body, err := io.ReadAll(resp.Body)
+
+		var apiResp APIResponse
+		if err := json.Unmarshal(body, &apiResp); err != nil {
+			log.Fatal(err)
+		}
+
+		for _, outlet := range apiResp.Data {
+			outletCost := outlet.EstimatedCost
+			outletRating := outlet.UserRating.AverageRating
+
+			if outletCost > int(cost) {
+				continue
+			}
+
+			if outletRating > bestOutlet.UserRating.AverageRating || (outletRating == bestOutlet.UserRating.AverageRating && outletCost < bestOutlet.EstimatedCost) {
+				bestOutlet = outlet
+			}
+		}
+
+		if page >= apiResp.TotalPages {
+			break
+		}
+		page++
+	}
+
+	return bestOutlet.Name
 }
 
 func main() {
