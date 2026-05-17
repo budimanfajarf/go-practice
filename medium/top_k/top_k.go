@@ -14,7 +14,12 @@ func TopKFrequent(nums []int, k int) []int {
 
 	topK := []int{}
 	for i := len(nums); i > 0; i-- {
-		for _, num := range frequentNums[i] {
+		numsInFrequent, ok := frequentNums[i]
+		if !ok {
+			continue
+		}
+
+		for _, num := range numsInFrequent {
 			if len(topK) == k {
 				return topK
 			}
